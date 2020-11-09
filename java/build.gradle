@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.jivesnake'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
+}
+
+tasks {
+    wrapper {
+        gradleVersion = '6.7'
+        distributionType = Wrapper.DistributionType.ALL
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
