@@ -1,4 +1,4 @@
-package com.jivesnake.dojo.binarysearch;
+package com.jivesnake.dojo.algorithms;
 
 import org.junit.jupiter.api.Test;
 
