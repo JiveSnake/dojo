@@ -16,11 +16,11 @@ public class Graph {
         return adjVertices.get(vertex);
     }
 
-    void addVertex(Vertex vertex) {
+    public void addVertex(Vertex vertex) {
         adjVertices.putIfAbsent(vertex, new ArrayList<>());
     }
 
-    void addEdge(Vertex v1, Vertex v2) {
+    public void addEdge(Vertex v1, Vertex v2) {
 
     }
 }

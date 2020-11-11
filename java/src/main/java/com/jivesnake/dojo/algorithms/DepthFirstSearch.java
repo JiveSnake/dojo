@@ -8,7 +8,15 @@ import java.util.List;
 import java.util.Set;
 
 public class DepthFirstSearch {
+    public static Vertex graphIter(Graph graph, Vertex vertex, List<Vertex> seen, Set<Vertex> visited, int target) {
+        return null;
+    }
+
     public static Vertex graphRecurs(Graph graph, Vertex vertex, List<Vertex> seen, Set<Vertex> visited, int target) {
+        return null;
+    }
+
+    public static Node treeIter(Node node, int target) {
         return null;
     }
 

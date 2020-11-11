@@ -1,5 +1,5 @@
 package com.jivesnake.dojo.algorithms;
 
-class FindAllSubstringsTest {
+class FindSubstringTest {
 
 }
