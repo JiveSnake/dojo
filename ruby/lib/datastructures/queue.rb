@@ -9,17 +9,4 @@
 # 
 
 class Queue
-  attr_accessor :store
-  def initialize
-    @store = Array.new
-  end
-  
-  def dequeue
-    @store.pop
-  end
-  
-  def enqueue(element)
-    @store.unshift(element)
-    self
-  end
 end
