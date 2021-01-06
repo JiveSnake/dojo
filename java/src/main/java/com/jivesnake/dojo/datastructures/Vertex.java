@@ -3,7 +3,7 @@ package com.jivesnake.dojo.datastructures;
 public class Vertex {
     private int value;
 
-    Vertex(int value) {
+    public Vertex(int value) {
         this.value = value;
     }
 

@@ -21,6 +21,7 @@ public class Graph {
     }
 
     public void addEdge(Vertex v1, Vertex v2) {
-
+        List<Vertex> adjacent = adjVertices.get(v1);
+        adjacent.add(v2);
     }
 }
