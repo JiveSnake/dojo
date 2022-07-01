@@ -11,7 +11,7 @@ class FindSubstringTest {
     void givenSubstringEqualsString_when_thenReturn() {
         List<List<Integer>> result = FindSubstring.findAllSubstrings("aaaa", "aaaa");
         System.out.println(result.toString());
-//        assertArrayEquals(new int[][]{0, 4}, result.toArray());
+        //assertArrayEquals(new int[][]{0, 4}, result.toArray());
     }
 
     @Test
@@ -19,4 +19,6 @@ class FindSubstringTest {
         List<List<Integer>> result = FindSubstring.findAllSubstrings("abaa", "aaaaa");
         assertTrue(result.isEmpty());
     }
+
+
 }

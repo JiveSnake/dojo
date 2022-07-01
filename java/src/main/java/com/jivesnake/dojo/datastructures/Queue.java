@@ -19,7 +19,7 @@ public class Queue<T> {
         queue.add(obj);
     }
 
-    public void enqueue(Collection<T> collection) {
+    public void enqueueAll(Collection<T> collection) {
         queue.addAll(collection);
     }
 

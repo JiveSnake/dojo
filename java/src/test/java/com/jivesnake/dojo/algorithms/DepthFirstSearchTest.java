@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import java.util.HashSet;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 class DepthFirstSearchTest {
@@ -39,6 +40,7 @@ class DepthFirstSearchTest {
         int target = 4;
         Vertex result = DepthFirstSearch.graphIter(graph, v0, target);
 
+        assertNotNull(result);
         assertEquals(target, result.getValue());
     }
 
@@ -55,8 +57,9 @@ class DepthFirstSearchTest {
     void givenAcyclicDirectedGraph_whenRecursDFSAndVertexInGraph_thenReturnVertex() {
         buildAcyclicDirectedGraph();
         int target = 4;
-        Vertex result = DepthFirstSearch.graphRecurs(graph, v0, new Stack<>(), new HashSet<>(), new HashSet<>(), target);
+        Vertex result = DepthFirstSearch.graphRecurs(graph, v0, new Stack<>(), new HashSet<>(), target);
 
+        assertNotNull(result);
         assertEquals(target, result.getValue());
     }
 
@@ -64,7 +67,7 @@ class DepthFirstSearchTest {
     void givenAcyclicDirectedGraph_whenRecursDFSAndVertexNotInGraph_thenReturnNull() {
         buildAcyclicDirectedGraph();
         int target = 8;
-        Vertex result = DepthFirstSearch.graphRecurs(graph, v0, new Stack<>(), new HashSet<>(), new HashSet<>(), target);
+        Vertex result = DepthFirstSearch.graphRecurs(graph, v0, new Stack<>(), new HashSet<>(), target);
 
         assertNull(result);
     }
@@ -75,6 +78,7 @@ class DepthFirstSearchTest {
         int target = 4;
         Vertex result = DepthFirstSearch.graphIter(graph, v0, target);
 
+        assertNotNull(result);
         assertEquals(target, result.getValue());
     }
 
@@ -91,8 +95,9 @@ class DepthFirstSearchTest {
     void givenCyclicUndirectedGraph_whenRecursDFSAndVertexInGraph_thenReturnVertex() {
         buildCyclicUndirectedGraph();
         int target = 4;
-        Vertex result = DepthFirstSearch.graphRecurs(graph, v0, new Stack<>(), new HashSet<>(), new HashSet<>(), target);
+        Vertex result = DepthFirstSearch.graphRecurs(graph, v0, new Stack<>(), new HashSet<>(), target);
 
+        assertNotNull(result);
         assertEquals(target, result.getValue());
     }
 
@@ -100,7 +105,7 @@ class DepthFirstSearchTest {
     void givenCyclicUndirectedGraph_whenRecursDFSAndVertexNotInGraph_thenReturnNull() {
         buildCyclicUndirectedGraph();
         int target = 8;
-        Vertex result = DepthFirstSearch.graphRecurs(graph, v0, new Stack<>(), new HashSet<>(), new HashSet<>(), target);
+        Vertex result = DepthFirstSearch.graphRecurs(graph, v0, new Stack<>(), new HashSet<>(), target);
 
         assertNull(result);
     }
@@ -110,6 +115,7 @@ class DepthFirstSearchTest {
         int target = 4;
         Node result = DepthFirstSearch.treeIter(root, target);
 
+        assertNotNull(result);
         assertEquals(target, result.getValue());
     }
 
@@ -124,15 +130,16 @@ class DepthFirstSearchTest {
     @Test
     void givenNodeInTree_whenTreeRecurs_thenReturnsNode() {
         int target = 4;
-        Node result = DepthFirstSearch.treeRecurs(root, new Stack<>(), new HashSet<>(), target);
+        Node result = DepthFirstSearch.treeRecurs(root, new Stack<>(), target);
 
+        assertNotNull(result);
         assertEquals(target, result.getValue());
     }
 
     @Test
     void givenNodeNotInTree_whenTreeRecurs_thenReturnNull() {
         int target = 8;
-        Node result = DepthFirstSearch.treeRecurs(root, new Stack<>(), new HashSet<>(), target);
+        Node result = DepthFirstSearch.treeRecurs(root, new Stack<>(), target);
 
         assertNull(result);
     }

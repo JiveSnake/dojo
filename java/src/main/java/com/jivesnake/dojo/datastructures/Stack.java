@@ -19,7 +19,7 @@ public class Stack<T> {
         stack.add(obj);
     }
 
-    public void push(Collection<T> collection) {
+    public void pushAll(Collection<T> collection) {
         stack.addAll(collection);
     }
 

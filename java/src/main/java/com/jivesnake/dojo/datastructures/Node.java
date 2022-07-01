@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Node {
-    private int value;
-    private List<Node> children;
+    private final int value;
+    private final List<Node> children;
 
     public Node(int value) {
         this.value = value;
