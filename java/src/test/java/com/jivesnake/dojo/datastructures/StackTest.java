@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class StackTest {
@@ -39,5 +40,12 @@ class StackTest {
         stack.pushAll(List.of(1, 2));
         assertEquals(2, stack.pop());
         assertEquals(1, stack.pop());
+    }
+
+    @Test
+    void test_popReturnsNull_WhenStackIsEmpty() {
+        stack.push(1);
+        stack.pop();
+        assertNull(stack.pop());
     }
 }
